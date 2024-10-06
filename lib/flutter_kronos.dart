@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 /// Unlike the device clock, the time reported by Kronos is unaffected when the local time is changed while your app is running
 class FlutterKronos {
-  static const MethodChannel _channel = const MethodChannel('flutter_kronos');
+  static const MethodChannel _channel = const MethodChannel('flutter_kronos_plus');
 
   /// Accessing [getCurrentTimeMs] will return the local time based on the last known accurate time + delta since last sync.
   static Future<int?> get getCurrentTimeMs async {
