@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 /// Unlike the device clock, the time reported by Kronos is unaffected when the local time is changed while your app is running
-class FlutterKronos {
-  static const MethodChannel _channel = const MethodChannel('flutter_kronos_plus');
+class FlutterKronosPlus {
+  static const MethodChannel _channel =
+      const MethodChannel('flutter_kronos_plus');
 
   /// Accessing [getCurrentTimeMs] will return the local time based on the last known accurate time + delta since last sync.
   static Future<int?> get getCurrentTimeMs async {
@@ -13,10 +14,11 @@ class FlutterKronos {
 
   static Future<DateTime?> get getDateTime async {
     final int? _ms = await _channel.invokeMethod("GET_CURRENT_TIME_MS");
-    if (_ms != null)
+    if (_ms != null) {
       return DateTime.fromMillisecondsSinceEpoch(_ms);
-    else
+    } else {
       return null;
+    }
   }
 
   /// If the NTP server cannot be reached or Kronos has not yet been synced,
@@ -32,10 +34,11 @@ class FlutterKronos {
 
   static Future<DateTime?> get getNtpDateTime async {
     final int? _ms = await _channel.invokeMethod("GET_CURRENT_NTP_TIME_MS");
-    if (_ms != null)
+    if (_ms != null) {
       return DateTime.fromMillisecondsSinceEpoch(_ms);
-    else
+    } else {
       return null;
+    }
   }
 
   static void sync() {
