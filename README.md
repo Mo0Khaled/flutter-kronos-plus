@@ -1,6 +1,6 @@
 # Kronos - NTP plugin for Flutter
 
-[![pub package](https://img.shields.io/pub/v/flutter_kronos.svg)](https://github.com/hautvfami/flutter-kronos)
+[![pub package](https://img.shields.io/pub/v/flutter_kronos_plus.svg)](https://github.com/hautvfami/flutter-kronos)
 [![pub package](https://img.shields.io/github/license/hautvfami/flutter-kronos.svg?style=flat)](https://github.com/hautvfami/flutter-kronos)
 [![pub package](https://img.shields.io/badge/platform-flutter-blue.svg)](https://github.com/hautvfami/flutter-kronos)
 
@@ -19,7 +19,7 @@ This plugin is based on [`Kronos`][1] in iOS and [`Kronos-Android`][2] in androi
 
 ## Installation
 
-Just add `flutter_kronos` as a [dependency in your pubspec.yaml file](https://flutter.io/using-packages/).
+Just add `flutter_kronos_plus` as a [dependency in your pubspec.yaml file](https://flutter.io/using-packages/).
 
 ### Android
 
