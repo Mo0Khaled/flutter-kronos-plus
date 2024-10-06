@@ -3,7 +3,7 @@
 # Run `pod lib lint flutter_kronos.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_kronos'
+  s.name             = 'flutter_kronos_plus'
   s.version          = '0.0.1'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC

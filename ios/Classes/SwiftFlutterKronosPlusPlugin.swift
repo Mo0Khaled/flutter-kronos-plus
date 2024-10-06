@@ -4,7 +4,7 @@ import Kronos
 
 public class SwiftFlutterKronosPlusPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_kronos", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "flutter_kronos_plus", binaryMessenger: registrar.messenger())
     let instance = SwiftFlutterKronosPlusPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
