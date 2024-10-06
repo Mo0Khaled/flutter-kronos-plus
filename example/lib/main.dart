@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_kronos_plus/flutter_kronos.dart';
+import 'package:flutter_kronos_plus/flutter_kronos_plus.dart';
 
 class _MyAppState extends State<MyApp> {
   int? _currentTimeMs;
@@ -17,10 +17,10 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     // Platform messages may fail, so we use a try/catch PlatformException.
-    FlutterKronos.sync();
+    FlutterKronosPlus.sync();
     try {
-      _currentTimeMs = await FlutterKronos.getCurrentTimeMs;
-      _currentNtpTimeMs = await FlutterKronos.getCurrentNtpTimeMs;
+      _currentTimeMs = await FlutterKronosPlus.getCurrentTimeMs;
+      _currentNtpTimeMs = await FlutterKronosPlus.getCurrentNtpTimeMs;
     } on PlatformException {}
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -33,8 +33,8 @@ class _MyAppState extends State<MyApp> {
 
   _refreshTime() async {
     final result = await Future.wait([
-      FlutterKronos.getCurrentTimeMs,
-      FlutterKronos.getCurrentNtpTimeMs,
+      FlutterKronosPlus.getCurrentTimeMs,
+      FlutterKronosPlus.getCurrentNtpTimeMs,
     ]);
     _currentTimeMs = result[0];
     _currentNtpTimeMs = result[1];
