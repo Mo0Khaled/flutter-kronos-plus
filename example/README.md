@@ -1,6 +1,6 @@
-# flutter_kronos_example
+# flutter_kronos_plus_example
 
-Demonstrates how to use the flutter_kronos plugin.
+Demonstrates how to use the flutter_kronos_plus plugin.
 
 ## Getting Started
 

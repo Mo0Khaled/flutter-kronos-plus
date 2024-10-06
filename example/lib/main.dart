@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_kronos/flutter_kronos.dart';
+import 'package:flutter_kronos_plus/flutter_kronos.dart';
 
 class _MyAppState extends State<MyApp> {
   int? _currentTimeMs;

@@ -1,4 +1,4 @@
-package com.stark.flutter_kronos
+package com.plugin.flutter_kronos_plus
 
 import androidx.annotation.NonNull
 import com.lyft.kronos.AndroidClockFactory
@@ -9,16 +9,11 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
-import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 
-import android.util.Log
-import android.content.Context
-
 /** FlutterKronosPlugin */
-class FlutterKronosPlugin : MethodCallHandler, FlutterPlugin, ActivityAware {
+class FlutterKronosPlusPlugin : MethodCallHandler, FlutterPlugin, ActivityAware {
 
     private var kronosClock: KronosClock? = null
     private var channel: MethodChannel? = null
@@ -44,7 +39,7 @@ class FlutterKronosPlugin : MethodCallHandler, FlutterPlugin, ActivityAware {
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         // no op
         val messenger = binding.getBinaryMessenger()
-        channel = MethodChannel(messenger, "flutter_kronos")
+        channel = MethodChannel(messenger, "flutter_kronos_plus")
         channel?.setMethodCallHandler(this)
     }
 
