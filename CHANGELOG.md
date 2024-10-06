@@ -1,3 +1,8 @@
+## 1.0.0
+- Updated the android dependencies.
+- Updated the gradle version.
+- Updated the kotlin version.
+- Updated the Kronos pod in IOS
 ## 0.0.1
 
 * Init project
