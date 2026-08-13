@@ -1,3 +1,7 @@
+## Unreleased
+- Added Swift Package Manager support for iOS.
+- Updated Kronos to 4.3.1 for Swift Package Manager and 4.3.0 for CocoaPods.
+
 ## 1.0.0
 - Updated the android dependencies.
 - Updated the gradle version.
